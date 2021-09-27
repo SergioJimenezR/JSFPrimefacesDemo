@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: sergi
+Build-Jdk: 16.0.2
+Implementation-Title: JSFPrimefacesDemo
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.sergiojimenez
+Implementation-URL: https://www.linkedin.com/in/sergiojimenezr/
+Created-By: Maven Integration for Eclipse
+

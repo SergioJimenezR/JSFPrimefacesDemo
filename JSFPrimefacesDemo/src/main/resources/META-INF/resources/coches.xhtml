@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Coches</title>
+</h:head>
+
+<h:body>
+
+	<p:dataTable var="cocheIterado" value="#{panelCoches.listaCoches}">
+		<p:column headerText="Identificador">
+			<h:outputText value="#{cocheIterado.id}" />
+		</p:column>
+
+		<p:column headerText="Año">
+			<h:outputText value="#{cocheIterado.anyo}" />
+		</p:column>
+
+		<p:column headerText="Marca">
+			<h:outputText value="#{cocheIterado.marca}" />
+		</p:column>
+
+		<p:column headerText="Color">
+			<h:outputText value="#{cocheIterado.color}" />
+		</p:column>
+	</p:dataTable>
+
+</h:body>
+</html>
