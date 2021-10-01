@@ -49,12 +49,11 @@ public class LoginView implements Serializable {
 
 	// action="#{panelLogin.comprobarLogin()}"
 	public void comprobarLogin() {
-		if (LoginDAO.existeUsuario(usuario) && hash.equals(LoginDAO.leerHashPassword(usuario))) {
+		if (LoginDAO.existeUsuario(usuario) && hash.equals(LoginDAO.leerHashPassword(usuario)))
 			mensaje = "Login correcto.";
-		} else {
+		else
 			mensaje = "Login incorrecto.";
-			usuario = "";
-		}
+		usuario = "";
 	}
 
 	// actionListener="#{panelLogin.comprobarLogin}"

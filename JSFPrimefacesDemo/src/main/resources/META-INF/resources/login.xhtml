@@ -19,7 +19,7 @@
 		<p:password id="password" value="#{panelLogin.password}" />
 
 		<p:commandButton id="btnLogin" value="¡Iniciar sesión!"
-			update="formLogin" actionListener="#{panelLogin.comprobarLogin}" />
+			update="formLogin" action="#{panelLogin.comprobarLogin()}" />
 
 		<p:outputLabel id="mensaje" value="#{panelLogin.mensaje}" />
 	</h:form>

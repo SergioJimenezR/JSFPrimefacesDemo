@@ -11,25 +11,50 @@
 
 <h:body>
 
-	<p:dataTable var="cocheIterado" value="#{panelCoches.listaCoches}">
-		<p:column headerText="Identificador">
-			<h:outputText value="#{cocheIterado.id}" />
-		</p:column>
+	<h:form>
 
-		<p:column headerText="Año">
-			<h:outputText value="#{cocheIterado.anyo}" />
-		</p:column>
+		<p:dataTable var="cocheIterado" value="#{panelCoches.listaCoches}"
+			widgetVar="tablaCoches"
+			emptyMessage="No existen coches dado el criterio."
+			filteredValue="#{panelCoches.listaFiltradaCoches}">
 
-		<p:column headerText="Marca">
-			<h:outputText value="#{cocheIterado.marca}" />
-		</p:column>
+			<f:facet name="header">
 
-		<p:column headerText="Color">
-			<h:outputText value="#{cocheIterado.color}" />
-		</p:column>
-	</p:dataTable>
+				<div class="p-d-flex p-ai-center p-jc-between">
+					<span>Lista de Coches</span>
+					<div>
+						<p:inputText id="globalFilter"
+							onkeyup="PF('tablaCoches').filter()"
+							placeholder="Búsqueda global" />
+					</div>
+				</div>
 
-	<form action="/login.xhtml">
+			</f:facet>
+
+			<p:column headerText="Identificador" sortBy="#{cocheIterado.id}"
+				filterBy="#{cocheIterado.id}">
+				<h:outputText value="#{cocheIterado.id}" />
+			</p:column>
+
+			<p:column headerText="Año" sortBy="#{cocheIterado.anyo}"
+				filterBy="#{cocheIterado.anyo}">
+				<h:outputText value="#{cocheIterado.anyo}" />
+			</p:column>
+
+			<p:column headerText="Marca" sortBy="#{cocheIterado.marca}"
+				filterBy="#{cocheIterado.marca}">
+				<h:outputText value="#{cocheIterado.marca}" />
+			</p:column>
+
+			<p:column headerText="Color" sortBy="#{cocheIterado.color}"
+				filterBy="#{cocheIterado.color}">
+				<h:outputText value="#{cocheIterado.color}" />
+			</p:column>
+		</p:dataTable>
+
+	</h:form>
+
+	<form action="/home.xhtml">
 		<input type="submit" value="Home" />
 	</form>
 

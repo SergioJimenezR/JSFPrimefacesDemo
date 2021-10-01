@@ -20,20 +20,13 @@ public class CochesView implements Serializable {
 	@Inject
 	private CocheDAO cocheDAO;
 
-	private Coche coche;
 	private List<Coche> listaCoches;
+
+	private List<Coche> listaFiltradaCoches;
 
 	@PostConstruct
 	public void init() {
 		listaCoches = cocheDAO.findAll();
-	}
-
-	public Coche getCoche() {
-		return coche;
-	}
-
-	public void setCoche(Coche coche) {
-		this.coche = coche;
 	}
 
 	/*
@@ -51,6 +44,14 @@ public class CochesView implements Serializable {
 
 	public void setListaCoches(List<Coche> listaCoches) {
 		this.listaCoches = listaCoches;
+	}
+
+	public List<Coche> getListaFiltradaCoches() {
+		return listaFiltradaCoches;
+	}
+
+	public void setListaFiltradaCoches(List<Coche> listaFiltradaCoches) {
+		this.listaFiltradaCoches = listaFiltradaCoches;
 	}
 
 }
