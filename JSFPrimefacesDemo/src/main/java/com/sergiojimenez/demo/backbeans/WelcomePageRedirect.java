@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WelcomePageRedirect implements WebMvcConfigurer {
 
-	private static final String PAGINA_INICIO = "coches.xhtml";
+	private static final String PAGINA_INICIO = "login.xhtml";
 
 	/**
 	 * Redirección de la página inicial.
